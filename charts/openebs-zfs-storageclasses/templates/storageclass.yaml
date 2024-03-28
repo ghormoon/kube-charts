@@ -1,0 +1,29 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: "{{ .Values.ct.name }}"
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+parameters:
+  recordsize: "128k"
+  compression: "{{ .Values.ct.compression }}"
+  dedup: "{{ .Values.ct.dedup }}"
+  fstype: "zfs"
+  thinprovision: "{{ .Values.zvol.thinprovision }}"
+  poolname: "{{ .Values.ct.poolName }}"
+provisioner: zfs.csi.openebs.io
+
+---
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: "{{ .Values.zvol.name }}"
+parameters:
+  volblocksize: "{{ .Values.zvol.volblocksize }}"
+  compression: "{{ .Values.zvol.compression }}"
+  dedup: "{{ .Values.zvol.dedup }}"
+  fstype: "{{ .Values.zvol.fstype }}"
+  thinprovision: "{{ .Values.zvol.thinprovision }}"
+  poolname: "{{ .Values.zvol.poolName }}"
+provisioner: zfs.csi.openebs.io

@@ -1,0 +1,14 @@
+ct:
+  name: "openebs-zfspv-ct"
+  poolName: "pool/ct"
+  compression: "lz4"
+  thinprovision: "yes"
+  dedup: "off"
+zvol:
+  name: "openebs-zfspv-zvol"
+  poolName: "pool/zvol"
+  compression: "lz4"
+  volblocksize: "16k"
+  thinprovision: "yes"
+  dedup: "off"
+  fstype: "xfs"

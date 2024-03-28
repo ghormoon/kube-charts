@@ -1,0 +1,5 @@
+apiVersion: v2
+name: openebs-zfs-storageclasses
+description: A Helm chart for deploying StorageClasses with configurable pool names.
+version: 0.0.3
+appVersion: 1.18.0
