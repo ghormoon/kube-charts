@@ -7,3 +7,7 @@ Packaged charts will be in repo [ghormoon/helm-charts](https://github.com/ghormo
 ## openebs-zfs-storageclasses
 
 To be deployed into the same namespace as [openebs/zfs-localpv](https://github.com/openebs/zfs-localpv).
+
+## metallb-l2advertisement
+
+To be deployed in the same namespace as metallb. ensires default L2Advertisement. Do not deploy if you're using BGP mode.

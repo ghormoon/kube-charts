@@ -1,0 +1,5 @@
+apiVersion: v2
+name: metallb-l2advertisement
+description: A Helm chart for deploying default L2Advertisement for metallb
+version: 0.0.1
+appVersion: 1.18.0
