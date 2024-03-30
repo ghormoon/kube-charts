@@ -12,3 +12,5 @@ zvol:
   thinprovision: "yes"
   dedup: "off"
   fstype: "xfs"
+volumesnapshotclass:
+  enabled: false
